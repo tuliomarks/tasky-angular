@@ -1,0 +1,38 @@
+
+<task-form [model]="model" [showCancel]="true" (onClose)="editMode()" *ngIf="isEditingMode" />
+<div class="flex flex-row shadow p-4 rounded-lg mb-2 bg-white" *ngIf="!isEditingMode">
+  <div class="flex-grow mr-2">
+    <div class="flex flex-row">
+      <span>{{model.title}}</span>
+      <button
+           class="ml-auto sm:ml-0"
+           mat-stroked-button
+           (click)="editMode()">
+           Edit
+       </button>
+    </div>    
+    <p class="pl-4 text-xs">{{model.description}}</p>
+    <div class="flex flex-row items-between">
+      <button
+         class="ml-auto sm:ml-0"
+         mat-stroked-button
+         *ngIf="!isFirstList()"
+         (click)="sendPrev()">
+         -
+     </button>
+     <button
+        class="ml-auto sm:ml-0"
+        mat-stroked-button
+        (click)="delete()">
+        Delete
+    </button>
+     <button
+         class="sm:mx-3"
+         mat-stroked-button
+         *ngIf="!isLastList()"
+         (click)="sendNext()">
+         +
+     </button>
+   </div>
+  </div>        
+</div>

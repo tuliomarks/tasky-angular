@@ -1,0 +1,33 @@
+<div class="flex flex-row justify-center items-center">
+  <!-- NEW PIPE -->
+  <div class="flex self-stretch flex-col">
+    <h3 class="font-bold flex-grow">Novo</h3>
+    <hr class="my-3">
+    <div class="flex flex-col">
+      <task-form [clearFormWhenSubmit]="true"></task-form>
+    </div>
+  </div> 
+
+  <!-- TO-DO PIPE -->
+  <div>
+    <h3 class="font-bold flex-grow">To Do</h3>
+    <hr class="my-3">
+    <div class="flex flex-col" *ngFor="let task of getTasks(tasks, 'todo')">
+      <task [model]="task"></task>
+    </div>
+  </div>   
+  <!-- DOING PIPE -->
+  <div>
+    <h3>Doing</h3>
+    <div class="flex flex-col" *ngFor="let task of getTasks(tasks, 'doing')">
+      <task [model]="task"></task>
+    </div>
+  </div>   
+  <!-- DONE PIPE -->
+  <div>
+    <h3>Done</h3>
+    <div class="flex flex-col" *ngFor="let task of getTasks(tasks, 'done')">
+      <task [model]="task"></task>
+    </div>
+  </div>   
+</div>
