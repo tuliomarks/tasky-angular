@@ -6,6 +6,8 @@ import { TaskFormComponent } from './task-form/task-form.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
     imports: [
@@ -17,10 +19,12 @@ import { HttpClientModule } from '@angular/common/http';
 
         MatFormFieldModule,
         MatInputModule,
+        MatIconModule,
     ],
     declarations: [
         TaskComponent,
         TaskFormComponent,
+        HeaderComponent
     ],
     exports: [
         CommonModule,
@@ -30,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
         HttpClientModule,
 
         TaskComponent,
-        TaskFormComponent
+        TaskFormComponent,
+        HeaderComponent
     ]
 })
 export class SharedModule

@@ -8,11 +8,12 @@ import { KanbanComponent } from './kanban/kanban.component';
 import { SharedModule } from './shared/shared.module';
 import { KanbanPipeComponent } from './kanban/components/kanban-pipe.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     KanbanComponent,
-    KanbanPipeComponent
+    KanbanPipeComponent,
   ],
   imports: [
     BrowserModule,
