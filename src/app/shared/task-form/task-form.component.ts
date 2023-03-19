@@ -71,6 +71,7 @@ export class TaskFormComponent implements OnInit
 
   discard() {
     this.form.reset();
+    this.createForm();
   }
 
 }

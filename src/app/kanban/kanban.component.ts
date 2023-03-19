@@ -13,7 +13,14 @@ import { TasksService } from '../shared/services/tasks.service';
 export class KanbanComponent implements OnInit, OnDestroy {
 
   tasks: Task[];
+  tasksList = TaskLists;
   _unsubscribeAll: Subject<any> = new Subject<any>();
+
+  pipes = [ 
+    {id: TaskLists.ToDo, title: 'To Do'},
+    {id: TaskLists.Doing, title: 'Doing'},
+    {id: TaskLists.Done, title: 'Done'} 
+  ];
 
   constructor(private _service: TasksService){
   }

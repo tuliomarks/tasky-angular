@@ -1,5 +1,5 @@
 <div class="flex flex-row justify-center items-center">
-  <!-- NEW PIPE -->
+  <!-- NEW Task Form -->
   <div class="flex self-stretch flex-col">
     <h3 class="font-bold flex-grow">Novo</h3>
     <hr class="my-3">
@@ -8,26 +8,8 @@
     </div>
   </div> 
 
-  <!-- TO-DO PIPE -->
-  <div>
-    <h3 class="font-bold flex-grow">To Do</h3>
-    <hr class="my-3">
-    <div class="flex flex-col" *ngFor="let task of getTasks(tasks, 'todo')">
-      <task [model]="task"></task>
-    </div>
-  </div>   
-  <!-- DOING PIPE -->
-  <div>
-    <h3>Doing</h3>
-    <div class="flex flex-col" *ngFor="let task of getTasks(tasks, 'doing')">
-      <task [model]="task"></task>
-    </div>
-  </div>   
-  <!-- DONE PIPE -->
-  <div>
-    <h3>Done</h3>
-    <div class="flex flex-col" *ngFor="let task of getTasks(tasks, 'done')">
-      <task [model]="task"></task>
-    </div>
-  </div>   
+  <!-- PIPEs -->
+  <ng-container *ngFor="let pipe of pipes">
+    <kanban-pipe [id]="pipe.id" [title]="pipe.title"></kanban-pipe>    
+  </ng-container>  
 </div>
