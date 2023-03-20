@@ -1,27 +1,39 @@
 # TaskyAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
+## TechStack
+- Angular 15
+- Tailwind CSS (para os estilos)
+- Angular Material (biblioteca de componentes)
+- Marked (com sanitizer nativo angular)
 
-## Development server
+## Rodando a aplicacao FRONTEND
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Iniciar a aplicacao backend:
+```console
+> cd BACK
+> npm install
+> npm run server
+```
 
-## Code scaffolding
+Abra um segundo terminal e inicie a aplicacao frontend:
+```console
+> cd FRONT
+> npm install
+> npm start (ou ng serve diretamente do CLI)
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Melhorias futuras
+- Usar Angular drag and drop para movimentacao dos cards entre as pipes;
+- Trocar o componente de markdown para um com menos dependencias e com editor incluso.
+- Fazer mais testes com todos as definicoes para markdown
+- Serviços e interceptors para autenticacao. Gerenciar os erros em caso de falha de comunicacao com a API.
+- Estilizar os componentes para responsividade; Deve-se pensar como fica a usabilidade.
 
-## Build
+## Markdown test
+Para testes com markdown pode ser utilizado o exemplo presente no arquivo markdown-sample.md;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Conclusões 
+Foi um projeto interessante de se fazer, ja tinha feito algumas vezes, o que facilitou na estruturacao e codificacao. 
+Se possivel avaliem também a versao em React que fiz ano passado, pode ser encontrado nesse link: [https://github.com/tuliomarks/tasky-react](https://github.com/tuliomarks/tasky-react).
+O tempo medio para desenvolvimento dessa aplicacao foi de 4-6 horas.
+Em caso de duvida, sugestão ou bugs encontrados entre em contato.

@@ -19,7 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
 
         MatFormFieldModule,
         MatInputModule,
-        MatIconModule,
+        MatIconModule
     ],
     declarations: [
         TaskComponent,

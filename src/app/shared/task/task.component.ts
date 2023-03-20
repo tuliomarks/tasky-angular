@@ -1,11 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { Task, TaskLists } from '../models/task.model';
 import { TasksService } from '../services/tasks.service';
+import { marked } from 'marked';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'task',
   templateUrl: './task.component.html',
-  styleUrls: ['./task.component.scss']
+  styleUrls: ['./task.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TaskComponent {
 
@@ -18,7 +21,9 @@ export class TaskComponent {
   ]
   isEditingMode: boolean;
 
-  constructor(private _service: TasksService){
+  constructor(
+    private _service: TasksService,
+    private _sanitizer: DomSanitizer){
   }
 
   delete(){
@@ -59,5 +64,9 @@ export class TaskComponent {
 
   editMode(){
     this.isEditingMode = !this.isEditingMode;
+  }
+
+  getParsed(value){
+    return this._sanitizer.bypassSecurityTrustHtml(marked.parse(value));
   }
 }

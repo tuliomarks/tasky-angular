@@ -11,7 +11,7 @@
            <mat-icon class="text-gray-600" svgIcon="mat_outline:edit"></mat-icon>
        </button>
     </div>    
-    <p class="pl-4 text-xs pb-3">{{model.description}}</p>
+    <p class="pl-4 text-xs pb-3 markdown-body" [innerHTML]="getParsed(model.description)"></p>
     <div class="flex flex-row justify-between">
       <button
          class="ml-auto sm:ml-0"

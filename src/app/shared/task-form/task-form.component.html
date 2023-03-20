@@ -13,7 +13,7 @@
     </mat-form-field>
     <mat-form-field>
       <mat-label>Conteudo</mat-label>
-      <input matInput [formControlName]="'description'">
+      <textarea matInput [formControlName]="'description'" rows="5"></textarea>
     </mat-form-field>
 
     <div class="flex flex-row items-end" [ngClass]="{ 'justify-between': !showCancel, 'justify-end': showCancel }">
